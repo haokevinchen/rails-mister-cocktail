@@ -12,27 +12,9 @@
   </head>
 
   <body>
-  <nav class="navbar-lewagon py-3">
-    <div class="container">
-      <%= image_tag "https://cdn3.iconfinder.com/data/icons/happy-new-year-2018-5/48/25_juice_cocktail_glass_drink_mocktail-512.png", alt: "Korktails", width: 36 %>
-      <h1 class="d-inline">elix-er</h1>
-    </div>
-  </nav>
-  <div class="container">
+    <%= render 'shared/navbar' %>
     <%= yield %>
-  </div>
-  <div class="footer">
-    <div class="footer-links">
-      <a href="#"><i class="fab fa-github"></i></a>
-      <a href="#"><i class="fab fa-instagram"></i></a>
-      <a href="#"><i class="fab fa-facebook"></i></a>
-      <a href="#"><i class="fab fa-twitter"></i></a>
-      <a href="#"><i class="fab fa-linkedin"></i></a>
-    </div>
-    <div class="footer-copyright">
-      Some footer text here
-    </div>
-  </div>
+    <%= render 'shared/footer' %>
   </body>
   <%= javascript_include_tag "application" %> <!-- from app/assets/javascripts/application.js -->
   <%= javascript_pack_tag "application" %>    <!-- from app/javascript/packs/application.js -->

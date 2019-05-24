@@ -1,22 +1,25 @@
-<h1>Cocktail List</h1>
+<div class="container d-flex justify-content-between my-3 pt-5">
+  <form class="form-inline">
+    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+    <button class="btn my-2 my-sm-0" type="submit">Search</button>
+  </form>
+  <button type="button" class="btn btn-primary"><i class="fas fa-plus-circle"></i>Add cocktail</button>
+</div>
+<div class="container">
+  <ul class="cards">
+    <% @cocktails.each do |cocktail| %>
+      <!-- <li class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3))"> -->
+        <li class="card">
+          <%= link_to cocktail_path(cocktail) do %>
+            <%= cl_image_tag cocktail.photo, height: 300, width: 400, crop: "mfit", class: "card-img-top", alt: "https://cdn.liquor.com/wp-content/uploads/2017/10/20141510/Washington-Apple-720x720-recipe.jpg"%>
+            <div class="card-body">
+              <h5 class="card-title"><%= cocktail.name %></h5>
+              <p><%= cocktail.description %></p>
+            </div>
+          <% end %>
+        </li>
+    <% end %>
+  </ul>
 
-<form class="form-inline">
-  <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-  <button class="btn my-2 my-sm-0" type="submit">Search</button>
-</form>
-
-<ul class="cards">
-  <% @cocktails.each do |cocktail| %>
-    <!-- <li class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3))"> -->
-    <li class="card">
-      <img src="https://cdn.liquor.com/wp-content/uploads/2017/10/20141510/Washington-Apple-720x720-recipe.jpg" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title"><%= cocktail.name %></h5>
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        <%= link_to "Get recipe", cocktail_path(cocktail), class: "card-link" %>
-      </div>
-    </li>
-  <% end %>
-</ul>
-
-<%= link_to "Add cocktail", new_cocktail_path %>
+  <%= link_to "Add cocktail", new_cocktail_path %>
+</div>
