@@ -19,6 +19,11 @@
   border-radius: 4px;
   box-shadow: 0 0 8px rgba(0,0,0,0.1);
   text-decoration: none;
+  transition: transform .5s;
+  &:hover {
+  box-shadow: rgba(0, 0, 0, 0.22) 0px 19px 43px;
+  transform: scale3d(1.006, 1.006, 1);
+  }
 }
 
 a {
@@ -77,6 +82,6 @@ a {
 // Extra large devices (large desktops, 1200px and up)
 @media (min-width: 1200px) {
   .cards {
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
   }
 }

@@ -1,13 +1,22 @@
 // Define variables for your color scheme
 
+// Primary colours:
+$teal: #5bd1d7;
+$teal-medium: #348498;
+$teal-dark: #004d61;
+$intense-red: #ff502f;
+
 // For example:
 $red: #FD1015;
-$blue: #00e0ff;;
+$blue: $teal;
 $light-blue: #00e0ff;
 $yellow: #FFC65A;
 $orange: #E67E22;
 $green: #1EDD88;
 $gray: #0E0000;
-$light-gray: #F4F4F4;
+$very-light-gray: #f9f9f9;
+$light-gray: #f6f6f6;
 $black: #333333;
 $dark-gray: #666666;
+$white: #fdfdfd;
+
