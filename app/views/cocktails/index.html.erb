@@ -11,7 +11,7 @@
       <!-- <li class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3))"> -->
         <li class="card">
           <%= link_to cocktail_path(cocktail) do %>
-            <%= cl_image_tag cocktail.photo, height: 300, width: 400, crop: "mfit", class: "card-img-top", alt: "https://cdn.liquor.com/wp-content/uploads/2017/10/20141510/Washington-Apple-720x720-recipe.jpg"%>
+            <%= cl_image_tag cocktail.photo, height: 300, width: 400, crop: "mfit", class: "card-img-top"%>
             <div class="card-body">
               <h5 class="card-title"><%= cocktail.name %></h5>
               <p><%= cocktail.description %></p>
